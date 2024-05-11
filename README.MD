@@ -1,3 +1,2 @@
-# CS50 python for fun
+# Data Analysis with Python
 
-Just a holiday fun exercise
