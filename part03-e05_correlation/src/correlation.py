@@ -2,20 +2,31 @@
 
 import scipy.stats
 import numpy as np
+import pandas as pd
+
 
 def load():
-    import pandas as pd
-    return pd.read_csv("src/iris.csv").drop('species', axis=1).values
+
+    return pd.read_csv("src/iris.csv").drop("species", axis=1).values
+
 
 def lengths():
-    return 0
+    df = load()
+    sepal_length = df[:, 0]
+    petal_length = df[:, 2]
+    corr_coef, p_value = scipy.stats.pearsonr(sepal_length, petal_length)
+    return corr_coef
+
 
 def correlations():
-    return np.array([])
+    df = load()
+    return np.corrcoef(df, rowvar=False)
+
 
 def main():
     print(lengths())
     print(correlations())
+
 
 if __name__ == "__main__":
     main()

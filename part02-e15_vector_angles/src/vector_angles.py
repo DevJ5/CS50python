@@ -14,7 +14,7 @@ def vector_angles(X, Y):
         result[i] = dotproduct / (magX * magY)
 
         # Alternative
-        # result[i] = (np.dot(X[i], Y[i])/scipy.linalg.norm(X[i])/scipy.linalg.norm(Y[i]))
+        # result[i] = np.dot(X[i], Y[i])/(scipy.linalg.norm(X[i])*scipy.linalg.norm(Y[i]))
 
     result = np.clip(result, -1, 1)
     return np.degrees(np.arccos(result))
