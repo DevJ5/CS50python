@@ -2,14 +2,12 @@
 
 import pandas as pd
 
-
-def read_series():
-    return pd.Series()
+def cyclists():
+    return None
 
 
 def main():
-    pass
-
-
+    return
+    
 if __name__ == "__main__":
     main()

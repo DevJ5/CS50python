@@ -2,14 +2,11 @@
 
 import pandas as pd
 
-
-def read_series():
-    return pd.Series()
-
+def subsetting_by_positions():
+    return pd.DataFrame()
 
 def main():
-    pass
-
+    return
 
 if __name__ == "__main__":
     main()

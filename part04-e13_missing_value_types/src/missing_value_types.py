@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 
 import pandas as pd
+import numpy as np
 
-
-def read_series():
-    return pd.Series()
-
-
+def missing_value_types():
+    return None
+               
 def main():
-    pass
-
+    return
 
 if __name__ == "__main__":
     main()

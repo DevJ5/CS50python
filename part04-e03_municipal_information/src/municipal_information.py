@@ -2,13 +2,8 @@
 
 import pandas as pd
 
-
-def read_series():
-    return pd.Series()
-
-
 def main():
-    pass
+    return
 
 
 if __name__ == "__main__":
