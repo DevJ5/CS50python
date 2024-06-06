@@ -3,10 +3,12 @@
 import pandas as pd
 
 def inverse_series(s):
-    return pd.Series()
+    print(s.values)
+    print(s.index)
+    return pd.Series(s.index,index=s.values)
 
 def main():
-    return
+    print(inverse_series(pd.Series([1, 2, 3])))
 
 if __name__ == "__main__":
     main()
