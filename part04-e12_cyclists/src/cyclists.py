@@ -2,12 +2,17 @@
 
 import pandas as pd
 
+
 def cyclists():
-    return None
+    df = pd.read_csv("src/Helsingin_pyorailijamaarat.csv", sep=";")
+    subset = df.dropna(how="all")
+    subset = subset.dropna(axis=1, how="all")
+    return subset
 
 
 def main():
-    return
-    
+    cyclists()
+
+
 if __name__ == "__main__":
     main()

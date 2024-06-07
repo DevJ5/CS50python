@@ -4,10 +4,17 @@ import pandas as pd
 import numpy as np
 
 def special_missing_values():
-    return None
+    df = pd.read_csv("src/UK-top40-1964-1-2.tsv",sep="\t")
+    subset = df[~df["LW"].isin(["New", "Re"])]
+    # Because Pos has only integers, its type is considered int
+    # Because LW has New and Re, its type is considered str
+    subset = subset[subset["Pos"] > subset["LW"].astype(int)]
+
+    return subset
+
 
 def main():
-    return
+    print(special_missing_values())
 
 if __name__ == "__main__":
     main()
