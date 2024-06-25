@@ -49,6 +49,7 @@ def nonconvex_clusters():
             acc_score = None
         else:
             noise_mask = model.labels_ == -1
+            # new_labels is a list, we need a numpy array to use masking
             acc_score = accuracy_score(y[~noise_mask], np.array(new_labels)[~noise_mask])
 
         # plt.figure(figsize=(8, 6))
