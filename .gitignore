@@ -17,3 +17,4 @@
 *.sh
 *.seq
 *.pyt
+course_config.toml
